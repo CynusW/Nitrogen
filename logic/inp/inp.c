@@ -9,5 +9,5 @@ char inp(char ask[]){
 
 
 int main(){
-    inp("This is a test ");
+    inp("This is a test? ");
 }

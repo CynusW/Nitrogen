@@ -20,22 +20,25 @@ void UnixShell(){
         printf("N> ");
         scanf("%s", &command);
         if(strstr(command, "log")){
-            for(int i = 0; i < strlen(command) - 5; i++){
-                if(strstr(command, "\")")) break;
+            for(int i = 0; i < strlen(command); i++){
+                // if(strstr(command, "\")")) break;
                 // printf();
                 system("./build/unix/log.out");
                 break;
             }
-        } else {
-            printf("Syntax error - interpreter.nit(1:1)\n");
-            printf("An error occured and...yeah the thing crashed\n");
-            printf("Details of error: %s\n", command);
             break;
         }
         if (strstr(command, "inp")){
-            for(int i = 0; i < strlen(command) - 5; i++){
-                if (strstr(command, "\")")) break;
+            for(int i = 0; i < strlen(command); i++){
+                // if (strstr(command, "\")")) break;
                 system("./build/unix/inp.out");
+                break;
+            }
+            break;
+        }
+        if (strstr(command, "err")){
+            for(int i = 0; i < strlen(command); i++){
+                system("./build/unix/err.out");
                 break;
             }
             break;

@@ -1,0 +1,7 @@
+Syntax Error - 6:04 - src/init.nit (1:1)
+
+A Syntax Error occured and the program broke
+
+log([] + [])
+    ^^^^^^^ syntax error: unknown token: []
+   	help: remove '[] + []'

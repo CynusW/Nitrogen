@@ -1,0 +1,7 @@
+Overflow Error - 0:00 PM = src/index.nit (1:1)
+
+An overflow error has occured and the program has crashed.
+
+for(i = 2,999,999,999; i < 3,000,000,000; i++) {}
+    ^^^^^^^^^^^^^^^^^ error occurred here
+        help: set both values under 2.14Billion

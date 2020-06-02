@@ -26,7 +26,8 @@ void errI(char error[]){
 
 
 // main (the testing functions)
-int main(){
-    err("syntax", "for testing purposes", "test.nit", "1:1");
-    // errI("for testing purposes");
+int main(int argc, char *argv[]){
+    if (argc > 2){
+        err(argv[1], argv[2], argv[3], argv[4]);
+    }
 }

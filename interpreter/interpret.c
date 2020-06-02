@@ -9,9 +9,9 @@
 
 
 // functions
-void run(char file[]){
-    // TODO: add
-}
+// void run(char file[]){
+//     // TODO: add
+// }
 
 void UnixShell(){
     // an infinite loop
@@ -27,6 +27,11 @@ void UnixShell(){
                 break;
             }
             break;
+            if (strstr(command, "log(\\)")){
+                for (int i = 0; i < strlen(command); i++){
+                    // system();
+                }
+            }
         }
         if (strstr(command, "inp")){
             for(int i = 0; i < strlen(command); i++){

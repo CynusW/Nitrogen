@@ -1,0 +1,4 @@
+Overflow Error -  3:29 - src/init.nit
+An overflow error has occured and the program crashed
+for(i = 2,999,999,999; i < 3,000,000,000; i++) {}    ^^^^^^^^^^^^^^^^^^ error occured here
+	help: set both values under 2billion

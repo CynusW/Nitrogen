@@ -29,13 +29,13 @@ void UnixShell(){
         scanf("%s", &command);
         if(strstr(command, "log")){
             for(int i = 0; i < strlen(command); i++){
-                // if(strstr(command, "\")")) break;
-                // printf();
                 if(command[3] == "("){
-                    
-                }
-                // system("./build/unix/log.out");
+                    for(int j = 3; j < strlen(command); j++){
+                        printf("%s\n", command[j]);
+                    }
+                    system("./build/unix.log.out");
                 break;
+                }
             }
             break;
             }
@@ -49,38 +49,10 @@ void UnixShell(){
         }
         if (strstr(command, "err")){
             for(int i = 0; i < strlen(command); i++){
-                if(command[3] == "("){
-                    for(int i = 0; i < strlen(command); i++){
-                            if (command[i] != ","){
-                                continue;
-                            } else {
-                                if (command[i] == ","){
-                                    for(int j = 0; j < i; j++){
-                                        switch (command[j]-1){
-                                        // first one
-                                        case ',':
-                                            // we can infer that j is either s or o (currently)
-                                            if (command[j] == 's'){
-                                                param1 = "syntax";
-                                            } else if (command[j] == "o"){
-                                                param1 = "overflow";
-                                            }   
-                                            break;
-                                        // this is the second one
-                                        case ', ':
-
-                                        default:
-                                            break;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                // system("./build/unix/err.out");
+                system("./build/unix/err.out");
                 break;
                 }
             break;
-            }
         } else {
             printf("Syntax error - interpreter.nit(1:1)\n");
             printf("An error occured and...yeah the thing crashed\n");

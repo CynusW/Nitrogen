@@ -14,8 +14,16 @@
 // }
 
 void UnixShell(){
-    // an infinite loop
+    // command array
     char command[500];
+
+    // error parameters
+    char* param1;
+    char* param2;
+    char* param3;
+    char* param4;
+
+    // an infinite loop
     for(; ;){
         printf("N> ");
         scanf("%s", &command);
@@ -23,16 +31,14 @@ void UnixShell(){
             for(int i = 0; i < strlen(command); i++){
                 // if(strstr(command, "\")")) break;
                 // printf();
-                system("./build/unix/log.out");
+                if(command[3] == "("){
+                    
+                }
+                // system("./build/unix/log.out");
                 break;
             }
             break;
-            if (strstr(command, "log(\\)")){
-                for (int i = 0; i < strlen(command); i++){
-                    // system();
-                }
             }
-        }
         if (strstr(command, "inp")){
             for(int i = 0; i < strlen(command); i++){
                 // if (strstr(command, "\")")) break;
@@ -43,10 +49,38 @@ void UnixShell(){
         }
         if (strstr(command, "err")){
             for(int i = 0; i < strlen(command); i++){
-                system("./build/unix/err.out");
+                if(command[3] == "("){
+                    for(int i = 0; i < strlen(command); i++){
+                            if (command[i] != ","){
+                                continue;
+                            } else {
+                                if (command[i] == ","){
+                                    for(int j = 0; j < i; j++){
+                                        switch (command[j]-1){
+                                        // first one
+                                        case ',':
+                                            // we can infer that j is either s or o (currently)
+                                            if (command[j] == 's'){
+                                                param1 = "syntax";
+                                            } else if (command[j] == "o"){
+                                                param1 = "overflow";
+                                            }   
+                                            break;
+                                        // this is the second one
+                                        case ', ':
+
+                                        default:
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                // system("./build/unix/err.out");
                 break;
-            }
+                }
             break;
+            }
         } else {
             printf("Syntax error - interpreter.nit(1:1)\n");
             printf("An error occured and...yeah the thing crashed\n");

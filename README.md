@@ -1,7 +1,6 @@
 ## Nitrogen Language
 
-Nitrogen Language built by: [https://github.com/Vresod](Vresod),
-[https://github.com/AVCADO](AVCADO)
+Nitrogen Language built by: Vresod and AVCADO
 
 ## Why!?
 So, you know javascript, right? Well, we all know javascript...is...horrid.
@@ -17,7 +16,7 @@ and is written in C and some others.
 ## Credits.
 Credits:
 
-[https://github.com/Vresod](Vresod) for fixing gramatical errors.
+Vresod for fixing gramatical errors.
 
 
 ## OK, I like it, give me a demo!

@@ -5,11 +5,11 @@
 
 
 // subP - prints the subtraction
-int subP(int num1, int num2){
+void subP(int num1, int num2){
   if (num1 > num2){
-    return num1 - num2;
+    printf("%d\n", num1 - num2);
   }
-  return num2 - num1;
+  printf("%d\n", num2 - num1);
 }
 
 // subR - returns the substraction
